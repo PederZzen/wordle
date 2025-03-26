@@ -4,7 +4,7 @@ const Guess = ({ guess, answer, isGuessed }) => {
     return (
         <Wrapper>
             {new Array(5).fill().map((_, idx) => {
-                const bgclr =! isGuessed 
+                const bgclr = !isGuessed 
                     ? "transparent"
                     : guess[idx] === answer[idx]
                     ? "#538d4e"
