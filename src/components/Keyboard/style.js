@@ -8,7 +8,14 @@ export const KeyboardContainer = styled.div`
 `
 
 export const Key = styled.button`
-    margin: 2px;
-    width: 40px;
-    height: 60px;
+    background-color: #818384;
+    color: white;
+    margin: 3px;
+    padding: 20px 15px;
+    min-width: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
 `
