@@ -7,6 +7,7 @@ import { getColorStatuses } from "./functions/logic";
 import { getRandomWord } from "./functions/words";
 import { updateKeyColors } from "./functions/keyboard";
 import { useKeyboardInput } from "./hooks/useKeyboardInput";
+import Header from "./components/Header";
 
 const App = () => {
   const [answer, setAnswer] = useState("");
@@ -72,6 +73,7 @@ const App = () => {
 
       {gameStatus !== "intro" && (
         <>
+          <Header />
           <GuessGrid
             guesses={guesses}
             currentGuess={currentGuess}
