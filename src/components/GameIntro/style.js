@@ -1,27 +1,56 @@
 import styled from "styled-components";
 
 export const GameIntroContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+
+  ul {
+    margin-left: 20px;
+
+    * {
+      margin-bottom: 5px;
+    }
+  }
+
+  .examples {
     display: flex;
-    flex-direction: column; 
-    gap: 15px;
-    max-width: 300px;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .container span {
-        padding: 5px;
-        border: 1px solid gray;
-        border-radius: 5px;
-        margin-right: 5px;
-    }
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 
-    .green {
-        background-color: #538d4e;
-    }
+  .example {
+    display: flex;
+    gap: 5px;
+    font-size: 25px;
+    font-weight: bold;
+  }
 
-    .yellow {
-        background-color: #b59f3b;
-    }
+  .example span {
+    border: 1px solid gray;
+    padding: 10px;
+    min-width: 50px;
+    text-align: center;
+  }
 
-    .gray {
-        background-color: #3a3a3c;
-    }
-`
+  .green {
+    background-color: #538d4e;
+  }
+
+  .yellow {
+    background-color: #b59f3b;
+  }
+
+  .gray {
+    background-color: #3a3a3c;
+  }
+`;

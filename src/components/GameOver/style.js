@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const GameOverContainer = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;  
-    transform: translate(-50%, -50%);
-    background-color: #818384;
-    padding: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #121213;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+`;

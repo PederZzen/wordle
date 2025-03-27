@@ -1,14 +1,30 @@
-import React from 'react'
-import { GameOverContainer } from './style'
+import { useEffect } from "react";
+import { GameOverContainer } from "./style";
 
-function GameOver({ answer }) {
+const GameOver = ({ hasWon, answer, restartGame }) => {
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Enter") {
+        restartGame();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [restartGame]);
+
   return (
     <GameOverContainer>
-        <h2>Game Over!</h2>
-        <p>The word was {answer}.</p>
-        <button className="button" onClick={() => window.location.reload()}>Play Again</button>
+      <p>
+        {hasWon
+          ? "You guessed it!"
+          : `Game Over. The correct word was: ${answer}`}
+      </p>
+      <button className="button" onClick={restartGame}>
+        Play Again
+      </button>
     </GameOverContainer>
-  )
-}
+  );
+};
 
-export default GameOver
+export default GameOver;

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Key, KeyboardContainer } from './style';
+import { Key, KeyboardContainer } from "./style";
 
 const Keyboard = ({ onKeyPress, keyStatuses }) => {
   const rows = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
@@ -17,10 +16,10 @@ const Keyboard = ({ onKeyPress, keyStatuses }) => {
       {rows.map((row, rowIndex) => (
         <div key={rowIndex}>
           {rowIndex === 2 && (
-            <Key onClick={() => onKeyPress('ENTER')}>ENTER</Key>
+            <Key onClick={() => onKeyPress("ENTER")}>ENTER</Key>
           )}
 
-          {row.split('').map((letter) => (
+          {row.split("").map((letter) => (
             <Key
               key={letter}
               onClick={() => onKeyPress(letter)}
@@ -31,7 +30,7 @@ const Keyboard = ({ onKeyPress, keyStatuses }) => {
           ))}
 
           {rowIndex === 2 && (
-            <Key onClick={() => onKeyPress('BACKSPACE')}>&#8678;</Key>
+            <Key onClick={() => onKeyPress("BACKSPACE")}>&#8678;</Key>
           )}
         </div>
       ))}
