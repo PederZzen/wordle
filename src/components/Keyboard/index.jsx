@@ -8,7 +8,7 @@ const Keyboard = ({ onKeyPress, keyStatuses }) => {
     if (status === "green") return "#538d4e";
     if (status === "yellow") return "#b59f3b";
     if (status === "gray") return "#3a3a3c";
-    return "#818384"; // default key color
+    return "#818384";
   };
 
   return (

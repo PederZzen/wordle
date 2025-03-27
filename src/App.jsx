@@ -80,7 +80,9 @@ const App = () => {
             answer={answer}
           />
 
-          <Keyboard onKeyPress={handleKeyInput} keyStatuses={keyColors} />
+          {gameStatus === "playing" && (
+            <Keyboard onKeyPress={handleKeyInput} keyStatuses={keyColors} />
+          )}
 
           {(gameStatus === "won" || gameStatus === "lost") && (
             <GameOver
